@@ -62,16 +62,14 @@ class clock {
     }
 }
 let time = new clock()
-let init: number, seconds, i = 0
+let init = input.runningTimeMicros(), seconds, i = 0
 
 input.onButtonPressed(Button.A, function () {
     time.setTime("0000")
-    init = input.runningTimeMicros()
 })
 
 radio.onReceivedString(function (receivedString: string) {
     time.setTime(receivedString)
-    init = input.runningTimeMicros()
 })
 
 input.onButtonPressed(Button.B, function () {

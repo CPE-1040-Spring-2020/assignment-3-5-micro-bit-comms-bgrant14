@@ -71,6 +71,7 @@ input.onButtonPressed(Button.A, function () {
 
 radio.onReceivedString(function (receivedString: string) {
     time.setTime(receivedString)
+    init = input.runningTimeMicros()
 })
 
 input.onButtonPressed(Button.B, function () {
